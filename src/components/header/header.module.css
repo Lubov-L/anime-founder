@@ -1,0 +1,14 @@
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.nav_link {
+    padding: 7px 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-left: 10px;
+}
