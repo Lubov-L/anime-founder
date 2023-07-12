@@ -11,10 +11,10 @@ function App() {
     const [search, SetSearch] = useState("");
 
     const GetTopAnime = async () => {
-        const temp = await fetch('https://api.jikan.moe/v4/anime/1/relations')
+        const temp = await fetch('https://api.jikan.moe/v4/top/anime')
             .then(res => res.json());
 
-        SetTopAnime(temp.top);
+        SetTopAnime(temp.data.slice(0, 5));
     }
 
     useEffect(() => {
