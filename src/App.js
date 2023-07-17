@@ -22,8 +22,6 @@ function App() {
 
     }, []);
 
-    console.log(topAnime);
-
     return (
         <div className="App">
             <Header/>
