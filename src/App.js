@@ -17,6 +17,21 @@ function App() {
         SetTopAnime(temp.data.slice(0, 5));
     }
 
+    const HandleSearch = e => {
+        e.preventDefault();
+
+        FetchAnime(search);
+    }
+
+    const FetchAnime = async (query) => {
+        const temp = await fetch(`https://api.jikan.moe/v4/anime?q=${query}&order_by=title&sort=asc&limit=10`)
+            .then(res => res.json());
+
+        console.log(temp);
+
+        SetAnimeList(temp.results);
+    }
+
     useEffect(() => {
         GetTopAnime();
 
@@ -25,9 +40,13 @@ function App() {
     return (
         <div className="App">
             <Header/>
-            <Main>
-                <Sidebar topAnime={topAnime}/>
-            </Main>
+            <Main
+                HandleSearch={HandleSearch}
+                search={search}
+                SetSearch={SetSearch}
+                animeList={animeList}/>
+            <Sidebar
+                topAnime={topAnime} />
             <Footer/>
         </div>
     );

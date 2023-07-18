@@ -1,28 +1,21 @@
 import React from 'react';
+import cl from './main.module.css';
 
-const Sidebar = () => {
+const Sidebar = ({topAnime}) => {
     return (
         <aside>
             <nav>
                 <h3>Top Anime</h3>
-                <a
-                    href="#"
-                    target="_blank"
-                    rel="noreferrer">
-                    Attack of
-                </a>
-                <a
-                    href="#"
-                    target="_blank"
-                    rel="noreferrer">
-                    Attack of
-                </a>
-                <a
-                    href="#"
-                    target="_blank"
-                    rel="noreferrer">
-                    Attack of
-                </a>
+                {topAnime.map(anime => (
+                    <a
+                        className={cl.top_link}
+                        href={anime.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        key={anime.mal_id}>
+                        {anime.title}
+                    </a>
+                ))}
             </nav>
         </aside>
     );

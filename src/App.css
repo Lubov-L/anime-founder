@@ -4,18 +4,23 @@
     padding: 0;
 }
 
-a, button {
-    text-decoration: none;
-    text-transform: uppercase;
-    color: black;
-}
-
 body {
     margin: 0 auto;
     max-width: 1000px;
 }
 
+a, button {
+    text-decoration: none;
+    color: black;
+}
+
+h3 {
+    text-align: center;
+    width: 100%;
+}
+
 button {
+    text-transform: uppercase;
     padding: 7px 20px;
     border: 1px solid black;
     border-radius: 10px;
