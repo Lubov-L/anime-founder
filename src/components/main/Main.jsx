@@ -20,11 +20,11 @@ const Main = (props) => {
             </div>
             <div className={cl.content}>
                 <div>
-                    {props.animeList && props.animeList.map(anime => (
+                    {props.animeList.map(anime => (
                         <AnimeCard
                             anime={anime}
-                            key={anime.mal_id}/>
-                        ))}
+                            key={anime.mal_id} />
+                    ))}
                 </div>
             </div>
         </div>
