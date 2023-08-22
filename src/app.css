@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Red Hat Display', sans-serif;
 }
 
 body {
@@ -14,16 +15,22 @@ a, button {
     color: black;
 }
 
+h3, form, button {
+    width: 100%;
+}
+
 h3 {
     text-align: center;
-    width: 100%;
+}
+
+form {
+    display: flex;
 }
 
 button {
     text-transform: uppercase;
     padding: 7px 20px;
-    border: 1px solid black;
+    border: 1px solid rgb(212, 192, 254);
     border-radius: 10px;
     max-width: 100px;
-    width: 100%;
 }
