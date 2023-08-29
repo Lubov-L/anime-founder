@@ -4,6 +4,7 @@ import Footer from "./components/footer/Footer";
 import './app.css';
 import {useEffect, useState} from "react";
 import Sidebar from "./components/main/Sidebar";
+import Search from "./components/search/search";
 
 function App() {
     const [animeList, SetAnimeList] = useState([]);
@@ -38,13 +39,16 @@ function App() {
     return (
         <div className="App">
             <Header/>
-            <Main
-                HandleSearch={HandleSearch}
-                search={search}
-                SetSearch={SetSearch}
-                animeList={animeList}/>
-            <Sidebar
-                topAnime={topAnime} />
+            <Search/>
+            <div className="all_content">
+                <Main
+                    HandleSearch={HandleSearch}
+                    search={search}
+                    SetSearch={SetSearch}
+                    animeList={animeList}/>
+                <Sidebar
+                    topAnime={topAnime} />
+            </div>
             <Footer/>
         </div>
     );
